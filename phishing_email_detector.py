@@ -15,6 +15,7 @@
 
 ########## ENTER YER CODE BELOW THIS LINE ##########
 subject = input("Enter the email subject line: ")
+check_subject = subject.lower
 print()
 print("SECURITY ASSESSMENT:")
 if "urgent" in subject or "immediate action required" in subject: 
@@ -26,7 +27,7 @@ elif "password reset" in subject:
 else:
     print("No phishing indicators detected.")
 print('------------------------')
-print(f"Analyzed subject: {subject}")
+print(f'Analyzed subject: "{subject}"')
 
 
 

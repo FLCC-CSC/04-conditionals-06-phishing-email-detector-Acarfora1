@@ -1,7 +1,7 @@
 # FILE NAME - phishing_email_detector.py
 
-# NAME: 
-# DATE: 
+# NAME: Alex Carfora
+# DATE: 10/2/25
 # BRIEF DESCRIPTION:  
 
 
@@ -14,7 +14,19 @@
 
 
 ########## ENTER YER CODE BELOW THIS LINE ##########
-
+subject = input("Enter the email subject line: ")
+print()
+print("SECURITY ASSESSMENT:")
+if "urgent" in subject or "immediate action required" in subject: 
+    print("HIGH RISK: Possible phishing attempt.")
+elif 'win' in subject or 'free' in subject:
+    print("MEDIUM RISK: Suspicious offer detected.")
+elif "password reset" in subject:
+    print("LOW RISK: Verify legitimacy with sender.")
+else:
+    print("No phishing indicators detected.")
+print('------------------------')
+print(f"Analyzed subject: {subject}")
 
 
 
